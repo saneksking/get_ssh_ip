@@ -16,7 +16,7 @@ def send_welcome(message):
     local_ip = s.getsockname()[0]
     s.close()
     login = os.getenv('LOGIN')
-    bot.reply_to(message, f'Your local IP-address: {local_ip};\n'
+    bot.reply_to(message, f'Server local IP-address: {local_ip};\n'
                           f'Command: ssh {login}@{local_ip}')
 
 
