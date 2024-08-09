@@ -11,13 +11,15 @@ bot = telebot.TeleBot(TOKEN)
 
 @bot.message_handler(commands=['start'])
 def send_welcome(message):
-    s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-    s.connect(("8.8.8.8", 80))
-    local_ip = s.getsockname()[0]
-    s.close()
-    login = os.getenv('LOGIN')
-    bot.reply_to(message, f'Server local IP-address: {local_ip};\n'
-                          f'Command: ssh {login}@{local_ip}')
+    user = str(message.from_user.id)
+    if user == os.getenv('ADMIN') or user == os.getenv('OWNER'):
+        s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+        s.connect(("8.8.8.8", 80))
+        local_ip = s.getsockname()[0]
+        s.close()
+        login = os.getenv('LOGIN')
+        bot.reply_to(message, f'Server local IP-address: {local_ip};\n'
+                              f'Command: ssh {login}@{local_ip}')
 
 
 bot.polling()
