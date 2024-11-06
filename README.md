@@ -11,7 +11,7 @@
 ## Help:
 
 - Clone project
-- Create file config.json and enter:
+- Create file `config.json` in your project and enter:
 ```json
 {
     "token": "your telegram token",
