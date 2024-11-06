@@ -1,8 +1,8 @@
-# Get SSH IP <sup>v0.0.1</sup>
+# Get SSH IP <sup>v0.1.0</sup>
 
 ---
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/saneksking/get_ssh_ip)](https://github.com/saneksking/get_ssh_ip/)
-![GitHub top language](https://img.shields.io/github/languages/top/get_ssh_ip/CLIToDo)
+![GitHub top language](https://img.shields.io/github/languages/top/saneksking/get_ssh_ip)
 [![GitHub](https://img.shields.io/github/license/saneksking/get_ssh_ip)](https://github.com/saneksking/get_ssh_ip/blob/master/LICENSE)
 ---
 **Get SSH IP** - Telegram Bot for get a command for connect to your SSH server
@@ -11,26 +11,22 @@
 ## Help:
 
 - Clone project
-- Install requirements
-
-`pip install -r requirements.txt`
+- Create file config.json and enter:
+```json
+{
+    "token": "your telegram token",
+    "admins": [
+        "chat_id1",
+        "chat_id1"
+    ]
+}
+```
 
 ---
 
 ## Run:
 
 `python app.py`
-
----
-
-<h4>After installing the requirements you need:</h4>
-1. Create file .env.
-2. Enter the bot token or other secret information into it. Example:
-
-```
-TOKEN = 'your tg token'
-LOGIN = 'your server login (username)'
-```
 
 ---
 
