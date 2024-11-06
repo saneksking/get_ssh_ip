@@ -21,7 +21,16 @@
 
 <h4>After installing the library you need:</h4>
 1. Create file .env.
-2. Enter the bot token or other secret information into it. Example: `TOKEN = 'your tg token'`
+2. Enter the bot token or other secret information into it. Example:
+
+```
+TOKEN = 'your tg token'
+LOGIN = 'your server login (username)'
+```
+
+---
+
+<img src="data/images/logo.png" alt='logo'>
 
 ---
 
